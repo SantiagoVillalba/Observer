@@ -5,10 +5,10 @@ namespace Observer
 {
     public interface IObservable
     {
-        List<IObserver> observers{get;}
+        List<IObserver> Observers{get;}
         void Notify();
-        void Suscribe();
-        void Unsuscribe();
+        void Subscribe(IObserver observer);
+        void Unsubscribe(IObserver observer);
 
     }
 }

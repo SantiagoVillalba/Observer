@@ -33,7 +33,7 @@ namespace Observer
             }
         }
 
-        public void GetTemperature()
+        public void Notify()
         {
             // Create an array of sample data to mimic a temperature device.
             Nullable<Decimal>[] temps = {14.6m, 14.65m, 14.7m, 14.9m, 14.9m, 15.2m, 15.25m, 15.2m, 15.4m, 15.45m };
@@ -60,14 +60,6 @@ namespace Observer
                         }
                     }
                 }
-            }
-        }
-
-        public void Notify()
-        {
-            foreach(IObserver observer in observers)
-            {
-                
             }
         }
     }
