@@ -8,9 +8,9 @@ namespace Observer
         private Temperature last;
         private TemperatureSensor provider;
 
-        public void StartReporting(TemperatureSensor provider)
+        public void StartReporting(IObservable provider)
         {
-            this.provider = provider;
+            this.provider =(TemperatureSensor)provider;
             this.first = true;
             this.provider.Subscribe(this);
         }
